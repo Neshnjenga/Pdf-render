@@ -20,4 +20,4 @@ Route::post('/crudpost',[CrudController::class,'crudpost'])->name('crudpost');
 Route::get('/edit/{id}',[CrudController::class,'edit'])->name('edit');
 Route::post('/editpost/{id}',[CrudController::class,'editpost'])->name('editpost');
 
-Route::get('/delete',[CrudController::class,'delete'])->name('delete');
+Route::get('/delete/{id}',[CrudController::class,'delete'])->name('delete');
