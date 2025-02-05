@@ -80,6 +80,9 @@ class CrudController extends Controller
 
     public function delete($id){
         $datas = Crud::find('id');
+        if(File::exists($datas->image)){
+            File::delete($datas->image);
+        }
         $datas->delete();
         return redirect(route('index'));
     }
